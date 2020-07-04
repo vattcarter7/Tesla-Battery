@@ -3,6 +3,7 @@ import './TeslaBattery.scss';
 import TeslaNotice from '../components/TeslaNotice/TeslaNotice';
 import TeslaCar from '../components/TeslaCar/TeslaCar';
 import TeslaStats from '../components/TeslaStats/TeslaStats';
+import TeslaCounter from '../components/TeslaCounter/TeslaCounter';
 import { getModelData } from '../services/BatteryService';
 
 class TeslaBattery extends React.Component {
@@ -54,6 +55,22 @@ class TeslaBattery extends React.Component {
         <h1>Range Per Charge</h1>
         <TeslaCar wheelsize={config.wheels} />
         <TeslaStats carstats={carstats} />
+        <div className='tesla-controls cf'>
+          <TeslaCounter
+            currentValue={this.state.config.speed}
+            initValues={this.props.counterDefaultVal.speed}
+            increment={this.increment}
+            decrement={this.decrement}
+          />
+          <div className='tesla-climate-container cf'>
+            <TeslaCounter
+              currentValue={this.state.config.temperature}
+              initValues={this.props.counterDefaultVal.temperature}
+              increment={this.increment}
+              decrement={this.decrement}
+            />
+          </div>
+        </div>
         <TeslaNotice />
       </form>
     );
