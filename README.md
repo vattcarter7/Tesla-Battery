@@ -4,4 +4,8 @@
 
 ##### Project Demo
 
-> [Live Demo](https://tesla-battery-react-redux.netlify.app)
+> [Live Demo](https://tesla-battery-react-redux-sopheak.netlify.app)
+
+##### Todo
+
+> add responsive layout on mobile device
