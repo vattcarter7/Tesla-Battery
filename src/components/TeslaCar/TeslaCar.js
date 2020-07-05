@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './TeslaCar.scss';
 
 const TeslaCar = (props) => (
@@ -14,8 +15,8 @@ const TeslaCar = (props) => (
   </div>
 );
 
-// TeslaCar.propTypes = {
-//   wheelsize: React.PropTypes.number
-// }
+TeslaCar.propTypes = {
+  wheelsize: PropTypes.number.isRequired
+};
 
 export default TeslaCar;
