@@ -1,56 +1,64 @@
 import { counterDefaultVal } from '../constants/counterDefaultVal';
+import {
+  SPEED_UP,
+  SPEED_DOWN,
+  TEMPERATURE_UP,
+  TEMPERATURE_DOWN,
+  CHANGE_CLIMATE,
+  CHANGE_WHEEL
+} from '../constants/actionTypes';
 
 export const speedUp = (value) => {
   return {
-    type: 'SPEED_UP',
+    type: SPEED_UP,
     value,
     step: counterDefaultVal.speed.step,
     maxValue: counterDefaultVal.speed.max
-  }
-}
+  };
+};
 
 export const speedDown = (value) => {
   return {
-    type: 'SPEED_DOWN',
+    type: SPEED_DOWN,
     value,
     step: counterDefaultVal.speed.step,
     minValue: counterDefaultVal.speed.min
-  }
-}
+  };
+};
 
 export const temperatureUp = (value) => {
   return {
-    type: 'TEMPERATURE_UP',
+    type: TEMPERATURE_UP,
     value,
     step: counterDefaultVal.temperature.step,
     maxValue: counterDefaultVal.temperature.max
-  }
-}
+  };
+};
 
 export const temperatureDown = (value) => {
   return {
-    type: 'TEMPERATURE_DOWN',
+    type: TEMPERATURE_DOWN,
     value,
     step: counterDefaultVal.temperature.step,
     minValue: counterDefaultVal.temperature.min
-  }
-}
+  };
+};
 
 export const changeClimate = () => {
   return {
-    type: 'CHANGE_CLIMATE'
-  }
-}
+    type: CHANGE_CLIMATE
+  };
+};
 
 export const changeWheel = (value) => {
   return {
-    type: 'CHANGE_WHEEL',
+    type: CHANGE_WHEEL,
     value
-  }
-}
+  };
+};
 
-export const updateStats = () => {
-  return {
-    type: 'UPDATE_STATS'
-  }
-}
+// export const updateStats = () => {
+//   return {
+//     type: UPDATE_STATS
+//   };
+// };

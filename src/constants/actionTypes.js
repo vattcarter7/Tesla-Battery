@@ -1,0 +1,6 @@
+export const SPEED_UP = 'SPEED_UP';
+export const SPEED_DOWN = 'SPEED_DOWN';
+export const TEMPERATURE_UP = 'TEMPERATURE_UP';
+export const TEMPERATURE_DOWN = 'TEMPERATURE_DOWN';
+export const CHANGE_CLIMATE = 'CHANGE_CLIMATE';
+export const CHANGE_WHEEL = 'CHANGE_WHEEL';
