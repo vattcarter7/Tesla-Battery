@@ -5,11 +5,11 @@
 
 .tesla-battery h1 {
   font-family: 'RobotoNormal';
-  font-weight: 100;
-  font-size: 38px;
-  text-align: center;
-  letter-spacing: 3px;
-}
+    font-weight: 100;
+    font-size: 38px;
+    text-align: center;
+    letter-spacing: 3px;
+}   
 
 .tesla-climate-container {
   float: left;
@@ -19,7 +19,6 @@
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
-
 .tesla-controls {
   display: block;
   width: 100%;
