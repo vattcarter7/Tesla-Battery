@@ -51,8 +51,8 @@ const calculateStats = (state) => {
 
 const rootReducers = (state = initialState, action) => {
   switch (action.type) {
-    case CHANGE_CLIMATE: {
-      const newState = {
+    case CHANGE_CLIMATE:
+      const newChangeClimateState = {
         ...state,
         config: {
           climate: !state.config.climate,
@@ -61,10 +61,10 @@ const rootReducers = (state = initialState, action) => {
           wheels: state.config.wheels
         }
       };
-      return updateStats(state, newState);
-    }
+      return updateStats(state, newChangeClimateState);
+
     case SPEED_UP:
-      const newState = {
+      const newSpeedUpState = {
         ...state,
         config: {
           climate: state.config.climate,
@@ -73,10 +73,10 @@ const rootReducers = (state = initialState, action) => {
           wheels: state.config.wheels
         }
       };
-      return updateStats(state, newState);
+      return updateStats(state, newSpeedUpState);
 
-    case SPEED_DOWN: {
-      const newState = {
+    case SPEED_DOWN:
+      const newSpeedDownState = {
         ...state,
         config: {
           climate: state.config.climate,
@@ -85,10 +85,10 @@ const rootReducers = (state = initialState, action) => {
           wheels: state.config.wheels
         }
       };
-      return updateStats(state, newState);
-    }
-    case TEMPERATURE_UP: {
-      const newState = {
+      return updateStats(state, newSpeedDownState);
+
+    case TEMPERATURE_UP:
+      const newTemperatureUpState = {
         ...state,
         config: {
           climate: state.config.climate,
@@ -97,10 +97,10 @@ const rootReducers = (state = initialState, action) => {
           wheels: state.config.wheels
         }
       };
-      return updateStats(state, newState);
-    }
-    case TEMPERATURE_DOWN: {
-      const newState = {
+      return updateStats(state, newTemperatureUpState);
+
+    case TEMPERATURE_DOWN:
+      const newTemperatureDownState = {
         ...state,
         config: {
           climate: state.config.climate,
@@ -109,10 +109,10 @@ const rootReducers = (state = initialState, action) => {
           wheels: state.config.wheels
         }
       };
-      return updateStats(state, newState);
-    }
-    case CHANGE_WHEEL: {
-      const newState = {
+      return updateStats(state, newTemperatureDownState);
+
+    case CHANGE_WHEEL:
+      const newChangeWheelState = {
         ...state,
         config: {
           climate: state.config.climate,
@@ -121,8 +121,8 @@ const rootReducers = (state = initialState, action) => {
           wheels: action.value
         }
       };
-      return updateStats(state, newState);
-    }
+      return updateStats(state, newChangeWheelState);
+
     default:
       return state;
   }
