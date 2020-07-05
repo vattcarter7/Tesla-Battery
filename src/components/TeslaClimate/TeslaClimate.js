@@ -1,5 +1,5 @@
 import React from 'react';
-import './TeslaClimate.css';
+import './TeslaClimate.scss';
 
 const TeslaClimate = (props) => (
   <div className='tesla-climate'>

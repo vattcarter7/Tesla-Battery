@@ -1,5 +1,5 @@
 import React from 'react';
-import './TeslaCar.css';
+import './TeslaCar.scss';
 
 const TeslaCar = (props) => (
   <div className='tesla-car'>
